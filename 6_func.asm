@@ -1,5 +1,5 @@
 global f1, f2, f3, df1, df2, df3
-section .data
+section .rodata
     const2 dd 14
     const3 dd 6
 section .text

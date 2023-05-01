@@ -9,7 +9,7 @@ double root(double (*f)(double), double (*df)(double), double (*g)(double), doub
     if (h_a > h_b) sign_dh = -1;
     if (h_c > y_c) sign_ddh = -1;
 
-    if(sign_dh * sign_ddh > 0){ //shift b
+    if(sign_dh * sign_ddh < 0){ //shift b
         do{
             prev = b;
             dh = df(b) - dg(b);
@@ -120,7 +120,7 @@ int main(void){
     double r12 = root(debug1, ddebug1, debug2, ddebug2, 0, 2, eps1);
     double r23 = root(debug2, ddebug2, debug3, ddebug3, 2, 4, eps1);
     double r13 = root(debug1, ddebug1, debug3, ddebug3, 0, 3, eps1);
-    //printf("%.8lf\n%.8lf\n%.8lf\n", r12, r23, r13);
+    printf("%.8lf\n%.8lf\n%.8lf\n", r12, r23, r13);
 
     //debug integrals
     double I = 0;

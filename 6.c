@@ -9,7 +9,7 @@ double root(double (*f)(double), double (*df)(double), double (*g)(double), doub
     if (h_a > h_b) sign_dh = -1;
     if (h_c > y_c) sign_ddh = -1;
 
-    if(sign_dh * sign_ddh > 0){ //shift b
+    if(sign_dh * sign_ddh < 0){ //shift b
         do{
             prev = b;
             dh = df(b) - dg(b);
