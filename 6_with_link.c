@@ -101,6 +101,6 @@ int main(int args, char *argv[]){
     }
 
     printf("Area = %.4lf\n", I);
-
+	
     return 0;
 }

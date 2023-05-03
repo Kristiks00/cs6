@@ -7,3 +7,4 @@ program: 6_with_link.o 6_func.o
 	gcc -m32 -no-pie -o program 6_with_link.o 6_func.o
 clean:
 	rm -rf 6_with_link.o 6_func.o program
+
